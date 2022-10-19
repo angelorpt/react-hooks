@@ -1,12 +1,15 @@
+import CounterContextProvider from "./components/useContext/contexts/CounterContextProvider";
 import Counter from "./components/useContext/Counter";
 import DoubleCount from "./components/useContext/DoubleCount";
 
 function App() {
   return (
-    <>
-      <Counter />
-      <DoubleCount />
-    </>
+    <CounterContextProvider>
+      <>
+        <Counter />
+        <DoubleCount />
+      </>
+    </CounterContextProvider>
   );
 }
 
